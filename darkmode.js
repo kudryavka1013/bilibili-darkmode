@@ -20,15 +20,25 @@ var $$ = document.querySelectorAll.bind(document);
     :root{
       --bg1: #121212 !important;
       --bg1_float: #1F1F1F !important;
+      --bg2: #121212 !important;
+      --bg2_float: #2E2E2E !important;
       --bg3: #2E2E2E !important;
       --text1: #C8CBCF !important;
       --text2: #ABADB0 !important;
-      --line_regular: #1F1F1F !important;
+      --line_light: #2E2E2E !important;
+      --line_regular: #4D4D4D !important;
       --graph_bg_thin: #1F1F1F !important;
       --graph_bg_regular: #262626 !important;
-      --graph_bg_thick: #2E2E2E !important;
-    }
+      --graph_bg_thick: #3D3D3D !important;
+      --brand_blue: #0096CC !important;
+     }
   `);
+  // 颜色配置覆盖
+  GM_addStyle(`
+    :root{
+      --Or5: #FF7F24 !important;
+    }
+  `)
   // 阴影处理
   GM_addStyle(`
     #bilibili-player-placeholder {
@@ -49,4 +59,20 @@ var $$ = document.querySelectorAll.bind(document);
       border-top: none !important;
     }
   `);
+  // 视频卡片icon
+  GM_addStyle(`
+    .bili-video-card__info--icon-text{
+      background-color: initial !important;
+      box-shadow: 0 0 1px 1px var(--Or5);
+    }
+  `)
+  // headerBar收藏夹
+  GM_addStyle(`
+    .favorite-panel-popover__nav .tab-item--active{
+      color: #E6E6E6;
+    }
+    .favorite-panel-popover__nav .tab-item--active .tab-item__num {
+      color: #E6E6E6;
+    }
+  `)
 })();
