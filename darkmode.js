@@ -32,6 +32,8 @@ var $$ = document.querySelectorAll.bind(document);
       --graph_bg_regular: #262626 !important;
       --graph_bg_thick: #3D3D3D !important;
       --brand_blue: #0096CC !important;
+      --v_text_disabled: #4D4D4D !important;
+      --brand_blue_thin: #0096CC !important;
      }
   `);
   // 颜色配置覆盖
@@ -78,6 +80,18 @@ var $$ = document.querySelectorAll.bind(document);
     }
     .favorite-panel-popover__nav .tab-item--active .tab-item__num {
       color: #E6E6E6;
+    }
+  `)
+  // search
+  GM_addStyle(`
+    .vui_button--tab:active, .vui_button--tab.vui_button--active, .vui_button--tab.vui_button--active:hover{
+      background-color: var(--v_graph_bg_thick) !important;
+    }
+    .vui_button[disabled], .vui_button[disabled]:hover, .vui_button[disabled]:active, .vui_button[disabled].vui_button--active{
+      border: 1px solid var(--v_line_regular) !important;
+    }
+    .esport-card-options .btn:hover{
+      color: #FFF !important;
     }
   `)
 })();
