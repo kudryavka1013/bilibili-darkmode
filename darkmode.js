@@ -8,6 +8,7 @@
 // @icon         https://www.bilibili.com/favicon.ico?v=1
 // @require      https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js
 // @grant        GM_addStyle
+// @run-at       document-start
 // ==/UserScript==
 /* globals jQuery, $, waitForKeyElements */
 
@@ -19,7 +20,7 @@ var $$ = document.querySelectorAll.bind(document);
   GM_addStyle(`
     :root{
       --bg1: #121212 !important;
-      --bg1_float: #1F1F1F !important;
+      --bg1_float: #1A1A1A !important;
       --bg2: #121212 !important;
       --bg2_float: #2E2E2E !important;
       --bg3: #2E2E2E !important;
@@ -50,9 +51,13 @@ var $$ = document.querySelectorAll.bind(document);
   `);
   // 边框处理
   GM_addStyle(`
-    #nav-searchform {
+    #nav-searchform:hover {
+      border: 1px solid var(--bg3) !important;
+    }
+    #nav-searchform.is-focus{
       border: 1px solid var(--bg3) !important;
       border-bottom: none !important;
+      opacity: 1 !important;
     }
     .search-panel {
       border: 1px solid var(--bg3) !important;
