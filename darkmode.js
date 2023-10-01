@@ -3,7 +3,7 @@
 // @name:zh-cn   b站深色模式
 // @name:en      bilibili darkmode
 // @license      MIT
-// @version      0.1.0
+// @version      0.1.1
 // @description  给b站添加深色样式
 // @description:zh-cn  给b站添加深色样式
 // @description:en make bilibili dark!
@@ -14,6 +14,7 @@
 // @grant        GM_addStyle
 // @run-at       document-start
 // @homepageURL  https://github.com/kudryavka1013/bilibili-darkmode
+// @namespace https://greasyfork.org/users/234510
 // ==/UserScript==
 /* globals jQuery, $, waitForKeyElements */
 
@@ -108,7 +109,7 @@ var $$ = document.querySelectorAll.bind(document);
       color: #FFF !important;
     }
   `)
-  // 视频评论区
+  // 评论区
   GM_addStyle(`
     .reply-box .box-normal .reply-box-send .send-text {
       color: var(--text2) !important;
@@ -150,6 +151,32 @@ var $$ = document.querySelectorAll.bind(document);
     }
     .reply-operation .operation-list {
       box-shadow: 0 0 5px #fff3 !important;
+    }
+  `)
+  // 动态首页
+  GM_addStyle(`
+    #app .bg {
+      background-image: none !important;
+      background-color: var(--bg1_float) !important;
+    }
+    .bili-dyn-my-info,
+    .bili-dyn-live-users,
+    .bili-dyn-publishing,
+    .bili-dyn-up-list,
+    .bili-dyn-list-tabs,
+    .bili-dyn-item,
+    .bili-dyn-topic-box {
+      box-shadow: 0 0 1px #FFF;
+    }
+    .bili-dyn-live-users__item-container:hover,
+    .relevant-topic-container__item:hover {
+      background-color: var(--graph_bg_regular) !important;
+    }
+    .bili-dyn-sidebar .bili-dyn-sidebar__btn {
+      box-shadow: 0 0 1px #FFF;
+    }
+    .bili-user-profile {
+      box-shadow: 0 0 1px 0px #FFF !important;
     }
   `)
 })();
