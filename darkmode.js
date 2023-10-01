@@ -1,14 +1,19 @@
 // ==UserScript==
-// @name         bilibili-darkmode
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to make bilibili dark!
-// @author       Kudryavka
+// @name         b站深色模式
+// @name:zh-cn   b站深色模式
+// @name:en      bilibili darkmode
+// @license      MIT
+// @version      0.1.0
+// @description  给b站添加深色样式
+// @description:zh-cn  给b站添加深色样式
+// @description:en make bilibili dark!
+// @author       kudryavka1013
 // @match        https://*.bilibili.com/*
 // @icon         https://www.bilibili.com/favicon.ico?v=1
 // @require      https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js
 // @grant        GM_addStyle
 // @run-at       document-start
+// @homepageURL  https://github.com/kudryavka1013/bilibili-darkmode
 // ==/UserScript==
 /* globals jQuery, $, waitForKeyElements */
 
