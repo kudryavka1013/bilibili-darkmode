@@ -87,6 +87,9 @@ var $$ = document.querySelectorAll.bind(document);
     .favorite-panel-popover__nav .tab-item--active .tab-item__num {
       color: #E6E6E6;
     }
+    .header-channel {
+      box-shadow: 0 2px 4px rgba(255,255,255,.08) !important;
+    }
   `)
   // 搜索页
   GM_addStyle(`
@@ -139,6 +142,9 @@ var $$ = document.querySelectorAll.bind(document);
     .reply-item .root-reply-container .content-warp .root-reply .reply-tag-list .reply-tag-item {
       background-color: initial !important;
       box-shadow: 0 0 1px 1px !important;
+    }
+    .reply-operation .operation-list {
+      box-shadow: 0 0 5px #fff3 !important;
     }
   `)
 })();
