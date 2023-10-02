@@ -179,4 +179,72 @@ var $$ = document.querySelectorAll.bind(document);
       box-shadow: 0 0 1px 0px #FFF !important;
     }
   `)
+  // 个人空间
+  GM_addStyle(`
+    #app.owner {
+      background-color: var(--bg1_float) !important;
+    }
+    .n .n-inner {
+      background-color: var(--bg1) !important;
+      box-shadow: 0 0 1px #FFF !important;
+    }
+    .n .n-text {
+      color: var(--text1) !important;
+    }
+    .n .n-btn.active .n-text {
+      color: #00a1d6 !important;
+    }
+    .n .n-data .n-data-v {
+      color: var(--text2) !important;
+    }
+    .n .n-inner .g-search input {
+      background-color: var(--bg3) !important;
+      border: 1px solid var(--line_regular) !important;
+      color: var(--text2) !important;
+    }
+    #page-index .col-1,
+    #page-index .col-2 .section {
+      background-color: var(--bg1) !important;
+      border: 1px solid var(--line_regular) !important;
+      color: var(--text1) !important;
+    }
+    #page-index .section-title,
+    #page-index .article-title,
+    #page-index .large-item .title,
+    #page-index .col-2 .section .user-auth.no-auth .no-auth-title .goto-auth,
+    #page-index .col-2 .user-info .user-info-title .info-title,
+    #page-index .col-2 .game-card__info-title {
+      color: var(--text1) !important;
+    }
+    #page-index .col-1 .section.i-pin-v .be-tab,
+    #page-index .col-1 .section,
+    #page-index .col-1 .channel .channel-item,
+    #page-index .col-2 .section-title,
+    #page-index .col-2 .user-info .user-info-title {
+      border-bottom: 1px solid var(--line_bold) !important;
+    }
+    #page-index .section .count {
+      background: none !important;
+      color: var(--text1) !important;
+      border: 1px solid var(--line_bold) !important;
+    }
+    #page-index .section .count:before,
+    #page-index .list-create {
+      background: none !important;
+    }
+    #page-index .fav-covers,
+    #page-index .col-2 .i-m-r2 {
+      border: 1px solid var(--line_bold) !important;
+    }
+    #page-index #i-ann-content textarea {
+      background-color: var(--bg3) !important;
+      color: var(--text1) !important;
+    }
+    #page-index .col-2 .elec .elec-status {
+      filter: invert(93%) !important;
+    }
+    #page-index .col-2 .elec .elec-status-bg-grey {
+      background: #555555 !important;
+    }
+  `)
 })();
