@@ -143,7 +143,14 @@ var $$ = document.querySelectorAll.bind(document);
       border-color: var(--line_bold) !important;
     }
     .user-card {
-      border: .5px solid var(--v_line_regular) !important;
+      border: 1px solid var(--line_regular) !important;
+      background-color: var(--bg1) !important;
+    }
+    .user-card div.info p.user a.name {
+      color: var(--text1);
+    }
+    .user-card .info .social span {
+      color: var(--text2);
     }
     .reply-item .root-reply-container .content-warp .root-reply .reply-tag-list .reply-tag-item {
       background-color: initial !important;
@@ -177,6 +184,13 @@ var $$ = document.querySelectorAll.bind(document);
     }
     .bili-user-profile {
       box-shadow: 0 0 1px 0px #FFF !important;
+      background-color: var(--bg1) !important;
+    }
+    .bili-user-profile .bili-user-profile-view__info__uname {
+      color: var(--text1);
+    }
+    .bili-user-profile .bili-user-profile-view__info__stat span{
+      color: var(--text2) !important;
     }
   `)
   // 个人空间
@@ -251,27 +265,67 @@ var $$ = document.querySelectorAll.bind(document);
       filter: invert(93%) !important;
     }
     #page-index .col-2 .elec .elec-status-bg-grey {
-      background: #555555 !important;
+      background-color: #555555 !important;
     }
     #page-dynamic .col-1 .bili-dyn-item {
       background-color: var(--bg1) !important;
-      color: var(--text1) !important; 
+      color: var(--text1) !important;
     }
     #page-dynamic .col-1 .bili-dyn-list-loading {
       background-color: var(--bg1) !important;
-      box-shadow: 0 0 1px #FFF
+      box-shadow: 0 0 1px #FFF;
     }
-    #page-dynamic .col-1 .bili-dyn-title__text,
+    #page-dynamic .col-1 .bili-dyn-title__text {
+     color: var(--text1);
+    }
     #page-dynamic .col-2 .user-info .user-info-title .info-title,
     #page-dynamic .col-1 .bili-rich-text__content,
     #page-dynamic .col-1 .bili-dyn-card-video__title {
       color: var(--text1) !important;
     }
-    #page-dynamic .col-1 .bili-dyn-card-video {
+    #page-dynamic .col-1 .bili-dyn-card-video,
+    .bb-comment .comment-send .comment-emoji {
       border: 1px solid var(--line_bold) !important;
     }
     #page-dynamic .col-1 .bili-dyn-card-video__body {
       background-color: initial !important;
+    }
+    #page-dynamic .col-1 .dynamic-card-comment .bb-comment,
+    .bb-comment .comment-list .list-item .info .btn-hover:hover {
+      background-color: initial !important;
+    }
+    .bb-comment .comment-header {
+      border-bottom: 1px solid var(--line_bold) !important;
+    }
+    .bb-comment .bottom-page.center,
+    .bb-comment .comment-list .list-item .con {
+     border-top:  1px solid var(--line_bold) !important;
+    }
+    .bb-comment .comment-header .tabs-order li:not(.on) {
+      color: var(--text1) !important;
+    }
+    .bb-comment .operation .opera-list {
+      background-color: #181818 !important;
+      color: var(--text1) !important;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.2) !important;
+    }
+    .bb-comment .operation .opera-list li:hover {
+      background-color: var(--bg3) !important;
+    }
+    .bb-comment .comment-send .textarea-container .ipt-txt {
+      background-color: var(--bg3) !important;
+      color: var(--text1) !important;
+      border: 1px solid var(--line_bold) !important;
+    }
+    .bb-comment .comment-send .textarea-container:hover .ipt-txt {
+      border-color: #00a1d6 !important;
+    }
+    .bb-comment .comment-list .list-item .info .reply-tags span {
+      background: none !important;
+      box-shadow: 0 0 1px #FFF !important;
+    }
+    .bb-comment .comment-list .list-item .user .name {
+      color: var(--text1);
     }
   `)
 })();
