@@ -181,7 +181,8 @@ var $$ = document.querySelectorAll.bind(document);
   `)
   // 个人空间
   GM_addStyle(`
-    #app.owner {
+    #app.owner,
+    #app.fans {
       background-color: var(--bg1_float) !important;
     }
     .n .n-inner {
@@ -203,7 +204,8 @@ var $$ = document.querySelectorAll.bind(document);
       color: var(--text2) !important;
     }
     #page-index .col-1,
-    #page-index .col-2 .section {
+    #page-index .col-2 .section,
+    #page-dynamic .col-2 .section {
       background-color: var(--bg1) !important;
       border: 1px solid var(--line_regular) !important;
       color: var(--text1) !important;
@@ -213,14 +215,14 @@ var $$ = document.querySelectorAll.bind(document);
     #page-index .large-item .title,
     #page-index .col-2 .section .user-auth.no-auth .no-auth-title .goto-auth,
     #page-index .col-2 .user-info .user-info-title .info-title,
-    #page-index .col-2 .game-card__info-title {
+    #page-index .col-2 .game-card__info-title,
+    #page-index .col-2 .section .user-auth .auth-description {
       color: var(--text1) !important;
     }
     #page-index .col-1 .section.i-pin-v .be-tab,
     #page-index .col-1 .section,
     #page-index .col-1 .channel .channel-item,
-    #page-index .col-2 .section-title,
-    #page-index .col-2 .user-info .user-info-title {
+    #page-index .col-2 .section-title {
       border-bottom: 1px solid var(--line_bold) !important;
     }
     #page-index .section .count {
@@ -233,8 +235,13 @@ var $$ = document.querySelectorAll.bind(document);
       background: none !important;
     }
     #page-index .fav-covers,
-    #page-index .col-2 .i-m-r2 {
+    #page-index .col-2 .i-m-r2,
+    #page-index .col-2 .i-live .i-live-unfo-btn {
       border: 1px solid var(--line_bold) !important;
+    }
+    #page-index .col-2 .i-live .i-live-fo-count {
+      border: 1px solid var(--line_bold) !important;
+      border-left-width: 0 !important;
     }
     #page-index #i-ann-content textarea {
       background-color: var(--bg3) !important;
@@ -245,6 +252,26 @@ var $$ = document.querySelectorAll.bind(document);
     }
     #page-index .col-2 .elec .elec-status-bg-grey {
       background: #555555 !important;
+    }
+    #page-dynamic .col-1 .bili-dyn-item {
+      background-color: var(--bg1) !important;
+      color: var(--text1) !important; 
+    }
+    #page-dynamic .col-1 .bili-dyn-list-loading {
+      background-color: var(--bg1) !important;
+      box-shadow: 0 0 1px #FFF
+    }
+    #page-dynamic .col-1 .bili-dyn-title__text,
+    #page-dynamic .col-2 .user-info .user-info-title .info-title,
+    #page-dynamic .col-1 .bili-rich-text__content,
+    #page-dynamic .col-1 .bili-dyn-card-video__title {
+      color: var(--text1) !important;
+    }
+    #page-dynamic .col-1 .bili-dyn-card-video {
+      border: 1px solid var(--line_bold) !important;
+    }
+    #page-dynamic .col-1 .bili-dyn-card-video__body {
+      background-color: initial !important;
     }
   `)
 })();
