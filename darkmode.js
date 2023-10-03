@@ -196,7 +196,8 @@ var $$ = document.querySelectorAll.bind(document);
   // 个人空间
   GM_addStyle(`
     #app.owner,
-    #app.fans {
+    #app.fans,
+    #app.visitor {
       background-color: var(--bg1_float) !important;
     }
     .n .n-inner {
@@ -207,7 +208,7 @@ var $$ = document.querySelectorAll.bind(document);
       color: var(--text1) !important;
     }
     .n .n-btn.active .n-text {
-      color: #00a1d6 !important;
+      color: #00A1D6 !important;
     }
     .n .n-data .n-data-v {
       color: var(--text2) !important;
@@ -283,6 +284,21 @@ var $$ = document.querySelectorAll.bind(document);
     #page-dynamic .col-1 .bili-dyn-card-video__title {
       color: var(--text1) !important;
     }
+    #page-dynamic .col-1 .bili-popover {
+      background-color: var(--bg1) !important;
+      border: 1px solid var(--line_bold) !important;
+    }
+    #page-dynamic .col-1 .bili-popover__arrow {
+      background-color: var(--bg1) !important;
+      border-left: 1px solid var(--line_bold) !important;
+      border-top: 1px solid var(--line_bold) !important;
+    }
+    #page-dynamic .col-1 .bili-dyn-more__menu__item {
+      color: var(--text1) !important;
+    }
+    #page-dynamic .col-1 .bili-dyn-more__menu__item:hover {
+      color: #00A1D6 !important;
+    }
     #page-dynamic .col-1 .bili-dyn-card-video,
     .bb-comment .comment-send .comment-emoji {
       border: 1px solid var(--line_bold) !important;
@@ -291,41 +307,80 @@ var $$ = document.querySelectorAll.bind(document);
       background-color: initial !important;
     }
     #page-dynamic .col-1 .dynamic-card-comment .bb-comment,
-    .bb-comment .comment-list .list-item .info .btn-hover:hover {
+    #page-dynamic .col-1 .bb-comment .comment-list .list-item .info .btn-hover:hover {
       background-color: initial !important;
     }
-    .bb-comment .comment-header {
+    #page-dynamic .col-1 .bb-comment .comment-header {
       border-bottom: 1px solid var(--line_bold) !important;
     }
-    .bb-comment .bottom-page.center,
-    .bb-comment .comment-list .list-item .con {
+    #page-dynamic .col-1 .bb-comment .bottom-page.center,
+    #page-dynamic .col-1 .bb-comment .comment-list .list-item .con {
      border-top:  1px solid var(--line_bold) !important;
     }
-    .bb-comment .comment-header .tabs-order li:not(.on) {
+    #page-dynamic .col-1 .bb-comment .comment-header .tabs-order li:not(.on) {
       color: var(--text1) !important;
     }
-    .bb-comment .operation .opera-list {
+    #page-dynamic .col-1 .bb-comment .operation .opera-list {
       background-color: #181818 !important;
       color: var(--text1) !important;
       box-shadow: 0 0 5px rgba(255, 255, 255, 0.2) !important;
     }
-    .bb-comment .operation .opera-list li:hover {
+    #page-dynamic .col-1 .bb-comment .operation .opera-list li:hover {
       background-color: var(--bg3) !important;
     }
-    .bb-comment .comment-send .textarea-container .ipt-txt {
+    #page-dynamic .col-1 .bb-comment .comment-send .textarea-container .ipt-txt {
       background-color: var(--bg3) !important;
       color: var(--text1) !important;
       border: 1px solid var(--line_bold) !important;
     }
-    .bb-comment .comment-send .textarea-container:hover .ipt-txt {
-      border-color: #00a1d6 !important;
+    #page-dynamic .col-1 .bb-comment .comment-send .textarea-container:hover .ipt-txt {
+      border-color: #00A1D6 !important;
     }
-    .bb-comment .comment-list .list-item .info .reply-tags span {
+    #page-dynamic .col-1 .bb-comment .comment-list .list-item .info .reply-tags span {
       background: none !important;
       box-shadow: 0 0 1px #FFF !important;
     }
-    .bb-comment .comment-list .list-item .user .name {
+    #page-dynamic .col-1 .bb-comment .comment-list .list-item div.user a.name {
       color: var(--text1);
+    }
+    .comment-bilibili-con {
+      background: var(--bg1) !important;
+      border: 1px solid var(--line_bold) !important;
+    }
+    .comment-bilibili-con .t,
+    .comment-bilibili-con .con label {
+      color: var(--text2) !important;
+    }
+    .comment-bilibili-con .other .ta textarea,
+    .bili-dyn-report__remark__field {
+      background-color: var(--bg3) !important;
+      color: var(--text1) !important;
+    }
+    .bili-dyn-report {
+      background: var(--bg1_float) !important;
+      border: 1px solid var(--line_bold) !important;
+    }
+    .bili-dyn-report .bili-radio__label {
+      color: var(--text2) !important;
+    }
+    .bili-dyn-report .bili-dyn-report__remark__content {
+      background-color: var(--bg3) !important;
+    }
+    .m-layer.m-button, .m_layer.m-button {
+      background: var(--bg1) !important;
+      border: 1px solid var(--line_bold) !important;
+      color: var(--text1) !important;
+    }
+    .be-dropdown-menu {
+      background-color: var(--bg1_float) !important;
+      border: 1px solid var(--line_bold) !important;
+    }
+    .be-dropdown-menu .be-dropdown-item {
+      color: var(--text1) !important;
+    }
+    .be-dropdown-menu .be-dropdown-item:hover {
+      background-color: var(--graph_bg_regular) !important;
+      color: #00A1D6 !important;
     }
   `)
 })();
