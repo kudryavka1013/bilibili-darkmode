@@ -42,12 +42,13 @@ var $$ = document.querySelectorAll.bind(document);
       --v_text_disabled: #4D4D4D !important;
       --brand_blue_thin: #0096CC !important;
       --graph_weak: #2E2E2E !important;
+      --Or5: #FF7F24 !important;
      }
   `);
-  // 颜色配置覆盖
+  // 底色覆盖
   GM_addStyle(`
-    :root{
-      --Or5: #FF7F24 !important;
+    html body{
+      background-color: var(--bg1_float) !important;
     }
   `)
   // 视频播放页处理
@@ -381,6 +382,66 @@ var $$ = document.querySelectorAll.bind(document);
     .be-dropdown-menu .be-dropdown-item:hover {
       background-color: var(--graph_bg_regular) !important;
       color: #00A1D6 !important;
+    }
+    #page-video .col-full,
+    #page-audio .col-full,
+    #page-article .col-full,
+    #page-myalbum .col-full {
+      background: var(--bg1) !important; 
+      box-shadow: 0 0 1px #FFF !important;
+    }
+    #page-video .col-full .contribution-sidenav~.main-content,
+    #page-audio .col-full .contribution-sidenav~.main-content,
+    #page-article .col-full .contribution-sidenav~.main-content,
+    #page-myalbum .col-full .contribution-sidenav~.album-content {
+      border-left: 1px solid var(--line_regular) !important;
+    }
+    #page-video .col-full .contribution-sidenav,
+    #page-audio .col-full .contribution-sidenav,
+    #page-article .col-full .contribution-sidenav,
+    #page-myalbum .col-full .contribution-sidenav {
+      border-right: 1px solid var(--line_regular) !important; 
+    }
+    .contribution-sidenav .contribution-item:not(.cur) .text {
+      color: var(--text1) !important;
+    }
+    .contribution-sidenav .contribution-item:not(.cur):hover {
+      background-color: var(--graph_bg_regular) !important;
+    }
+    .be-tab-item:not(.is-active),
+    #page-video .page-head__left .video-title,
+    #page-audio .row .breadcrumb .item,
+    #page-article .row .breadcrumb .item,
+    #page-myalbum .album-list__title,
+    .album-card__title,
+    #page-video .list-item .title,
+    #page-article .article-title a,
+    .small-item .title:not(:hover) {
+      color: var(--text1) !important;
+    }
+    #page-video #submit-video-type-filter,
+    #page-myalbum .album-list__tabs {
+      background-color: var(--bg3) !important; 
+    }
+    #page-video #submit-video-type-filter a:not(.active),
+    #page-myalbum .album-list__tab:not(.album-list__tab--active) .album-list__tab-name {
+      color: var(--text1) !important;
+    }
+    #page-video #submit-video-type-filter a:not(.active):hover,
+    #page-myalbum .album-list__tab:not(.album-list__tab--active) .album-list__tab-name:hover {
+      color: #00A1D6 !important;
+    }
+    #page-video .list-item,
+    #page-article .s-content {
+      border-bottom: 1px solid var(--line_regular) !important;
+    }
+    #page-video .be-pager li:not(.be-pager-item-active) {
+      background: none !important;
+      border: 1px solid var(--line_bold) !important;
+    }
+    #page-video .be-pager .be-pager-options-elevator input {
+      background: var(--bg3) !important;
+      border: 1px solid var(--line_bold) !important;
     }
   `)
 })();
