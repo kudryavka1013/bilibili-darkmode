@@ -386,7 +386,8 @@ var $$ = document.querySelectorAll.bind(document);
     #page-video .col-full,
     #page-audio .col-full,
     #page-article .col-full,
-    #page-myalbum .col-full {
+    #page-myalbum .col-full,
+    #page-channel .col-full {
       background: var(--bg1) !important; 
       box-shadow: 0 0 1px #FFF !important;
     }
@@ -413,10 +414,15 @@ var $$ = document.querySelectorAll.bind(document);
     #page-audio .row .breadcrumb .item,
     #page-article .row .breadcrumb .item,
     #page-myalbum .album-list__title,
-    .album-card__title,
+    #page-myalbum .album-card__title,
     #page-video .list-item .title,
     #page-article .article-title a,
-    .small-item .title:not(:hover) {
+    #page-video .small-item .title:not(:hover),
+    #page-channel .series-item .item-title,
+    #page-channel .channel-index .breadcrumb .item.cur,
+    #page-channel .card-item .title:not(:hover),
+    #page-channel #page-series-detail .channel-detail .content .breadcrumb .item,
+    #page-channel .small-item .title:not(:hover) {
       color: var(--text1) !important;
     }
     #page-video #submit-video-type-filter,
@@ -432,16 +438,36 @@ var $$ = document.querySelectorAll.bind(document);
       color: #00A1D6 !important;
     }
     #page-video .list-item,
-    #page-article .s-content {
+    #page-article .s-content,
+    #page-channel #page-series-detail .filter {
       border-bottom: 1px solid var(--line_regular) !important;
     }
-    #page-video .be-pager li:not(.be-pager-item-active) {
+    #page-video .be-pager li:not(.be-pager-item-active),
+    #page-channel .be-pager li:not(.be-pager-item-active) {
       background: none !important;
       border: 1px solid var(--line_bold) !important;
     }
-    #page-video .be-pager .be-pager-options-elevator input {
+    #page-video .be-pager .be-pager-options-elevator input,
+    #page-channel .be-pager .be-pager-options-elevator input {
       background: var(--bg3) !important;
       border: 1px solid var(--line_bold) !important;
+    }
+    #page-channel .channel-add-video {
+      background: none !important;
+    }
+    #page-channel .series-item .split-line {
+      background-color: var(--line_bold) !important;
+    }
+    #page-channel .series-item .item-title .qipapnum {
+      background: none !important;
+      color: var(--text1) !important;
+      border: 1px solid var(--line_bold) !important;
+    }
+    #page-channel .series-item .item-title .qipapnum:before {
+      background: none !important;
+    }
+    #page-channel .section {
+      border-bottom: none !important;
     }
   `)
 })();
