@@ -238,6 +238,7 @@ var $$ = document.querySelectorAll.bind(document);
     #page-index .col-1 .section.i-pin-v .be-tab,
     #page-index .col-1 .section,
     #page-index .col-1 .channel .channel-item,
+    #page-index .col-1 .user-info .user-info-title,
     #page-index .col-2 .section-title {
       border-bottom: 1px solid var(--line_bold) !important;
     }
@@ -387,14 +388,21 @@ var $$ = document.querySelectorAll.bind(document);
     #page-audio .col-full,
     #page-article .col-full,
     #page-myalbum .col-full,
-    #page-channel .col-full {
+    #page-channel .col-full,
+    #page-fav .col-full,
+    #page-bangumi .col-full,
+    #page-pgc .col-full,
+    #page-subs .col-full,
+    #page-setting .col-full,
+    #page-follows .col-full {
       background: var(--bg1) !important; 
       box-shadow: 0 0 1px #FFF !important;
     }
     #page-video .col-full .contribution-sidenav~.main-content,
     #page-audio .col-full .contribution-sidenav~.main-content,
     #page-article .col-full .contribution-sidenav~.main-content,
-    #page-myalbum .col-full .contribution-sidenav~.album-content {
+    #page-myalbum .col-full .contribution-sidenav~.album-content,
+    #page-fav .col-full .fav-main {
       border-left: 1px solid var(--line_regular) !important;
     }
     #page-video .col-full .contribution-sidenav,
@@ -423,7 +431,7 @@ var $$ = document.querySelectorAll.bind(document);
     #page-channel .card-item .title:not(:hover),
     #page-channel #page-series-detail .channel-detail .content .breadcrumb .item,
     #page-channel .small-item .title:not(:hover) {
-      color: var(--text1) !important;
+      color: var(--text2) !important;
     }
     #page-video #submit-video-type-filter,
     #page-myalbum .album-list__tabs {
@@ -442,13 +450,16 @@ var $$ = document.querySelectorAll.bind(document);
     #page-channel #page-series-detail .filter {
       border-bottom: 1px solid var(--line_regular) !important;
     }
-    #page-video .be-pager li:not(.be-pager-item-active),
-    #page-channel .be-pager li:not(.be-pager-item-active) {
+    #page-video .be-pager li:not(.be-pager-item-active):not(.be-pager-item-jump-next),
+    #page-channel .be-pager li:not(.be-pager-item-active):not(.be-pager-item-jump-next),
+    #page-fav .be-pager li:not(.be-pager-item-active):not(.be-pager-item-jump-next) {
       background: none !important;
       border: 1px solid var(--line_bold) !important;
     }
     #page-video .be-pager .be-pager-options-elevator input,
-    #page-channel .be-pager .be-pager-options-elevator input {
+    #page-channel .be-pager .be-pager-options-elevator input,
+    #page-fav .be-pager .be-pager-options-elevator input,
+    #page-fav .fav-main .filter-item.search input {
       background: var(--bg3) !important;
       border: 1px solid var(--line_bold) !important;
     }
@@ -466,8 +477,43 @@ var $$ = document.querySelectorAll.bind(document);
     #page-channel .series-item .item-title .qipapnum:before {
       background: none !important;
     }
-    #page-channel .section {
+    #page-channel .section,
+    #page-fav .fav-header {
       border-bottom: none !important;
+    }
+    #page-fav .fav-sidenav .nav-container {
+      border-bottom: 1px solid var(--line_regular) !important;
+    }
+    #page-fav .fav-main .favList-info,
+    #page-fav .be-dropdown-item.be-dropdown-item-delimiter,
+    #page-fav .opus-list .opus-item {
+      border-bottom: 1px solid var(--line_bold) !important;
+    }
+    #page-fav .fav-sidenav .watch-later {
+      border-top: 1px solid var(--line_bold) !important; 
+    }
+    #page-fav .fav-main .small-item {
+      border: none !important;
+    }
+    #page-fav .fav-sidenav .fav-item:hover {
+      background-color: var(--graph_bg_regular) !important;
+    }
+    #page-fav .favInfo-box .favInfo-details .fav-name:not(:hover),
+    #page-fav .fav-main .filter-item:not(.be-dropdown):not(:hover),
+    #page-fav .small-item .title:not(:hover),
+    #page-fav .fav-sidenav .fav-item:not(.cur):not(:hover) .text,
+    #page-fav .fav-sidenav .nav-title .text,
+    #page-fav .fav-main .filter-item.be-dropdown,
+    #page-fav .fav-main .filter-item .filter-type .be-dropdown-item:not(:hover) span,
+    #page-fav .fav-main .fav-action-top .back-to-info:not(:hover),
+    #page-fav .fav-main .fav-action-top .back-to-info:not(:hover),
+    #page-fav .opus-list .opus-item-title,
+    #page-fav .breadcrumb .item.cur,
+    #page-fav .fav-main .fav-content .fav-pugv-list .pugv-item .item-infos p.main-title {
+      color: var(--text2) !important;
+    }
+    #page-fav .fav-main .fav-action-bottom .fav-action-fixtop {
+      background-color: var(--bg1) !important;
     }
   `)
 })();
