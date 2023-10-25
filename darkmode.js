@@ -10,21 +10,23 @@
 // @author       kudryavka1013
 // @match        https://*.bilibili.com/*
 // @icon         https://www.bilibili.com/favicon.ico?v=1
-// @require      https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js
 // @grant        GM_addStyle
 // @run-at       document-start
 // @homepageURL  https://github.com/kudryavka1013/bilibili-darkmode
 // @namespace https://greasyfork.org/users/234510
 // ==/UserScript==
-/* globals jQuery, $, waitForKeyElements */
-
-var $$ = document.querySelectorAll.bind(document);
 
 (function () {
   "use strict";
+  const url = window.location.href;
+  const urlSet = {
+    home: "https://www.bilibili.com",
+    search: "https://search.bilibili.com",
+    space: "https://space.bilibili.com",
+  };
   // 全局色彩样式覆写
-  GM_addStyle(`
-    :root{
+  const globalColorStyle = `
+    :root {
       --bg1: #121212 !important;
       --bg1_float: #1A1A1A !important;
       --bg2: #121212 !important;
@@ -43,14 +45,19 @@ var $$ = document.querySelectorAll.bind(document);
       --brand_blue_thin: #0096CC !important;
       --graph_weak: #2E2E2E !important;
       --Or5: #FF7F24 !important;
-     }
-  `);
-  // 底色覆盖
-  GM_addStyle(`
-    html body{
-      background-color: var(--bg1_float) !important;
     }
-  `)
+  `;
+  // 标准背景底色
+  const stdBackground = `background-color: var(--bg1_float) !important;`
+  // 背景底色
+  const backgroundSelector = [
+    'html body', // 全局
+  ]
+  GM_addStyle(globalColorStyle);
+  // 测试底色覆盖
+  GM_addStyle(`${backgroundSelector.join(',')} {
+    ${stdBackground}
+  }`);
   // 视频播放页处理
   GM_addStyle(`
     #bilibili-player-placeholder {
@@ -85,7 +92,7 @@ var $$ = document.querySelectorAll.bind(document);
       background-color: initial !important;
       box-shadow: 0 0 1px 1px var(--Or5);
     }
-  `)
+  `);
   // headerBar收藏夹
   GM_addStyle(`
     .favorite-panel-popover__nav .tab-item--active {
@@ -97,7 +104,7 @@ var $$ = document.querySelectorAll.bind(document);
     .header-channel {
       box-shadow: 0 2px 4px rgba(255,255,255,.08) !important;
     }
-  `)
+  `);
   // 搜索页
   GM_addStyle(`
     .vui_button--tab:active, .vui_button--tab.vui_button--active, .vui_button--tab.vui_button--active:hover {
@@ -109,7 +116,7 @@ var $$ = document.querySelectorAll.bind(document);
     .esport-card-options .btn:hover {
       color: #FFF !important;
     }
-  `)
+  `);
   // 评论区
   GM_addStyle(`
     .reply-box .box-normal .reply-box-send .send-text {
@@ -160,7 +167,7 @@ var $$ = document.querySelectorAll.bind(document);
     .reply-operation .operation-list {
       box-shadow: 0 0 5px #fff3 !important;
     }
-  `)
+  `);
   // 动态首页
   GM_addStyle(`
     #app .bg {
@@ -193,7 +200,7 @@ var $$ = document.querySelectorAll.bind(document);
     .bili-user-profile .bili-user-profile-view__info__stat span{
       color: var(--text2) !important;
     }
-  `)
+  `);
   // 个人空间
   GM_addStyle(`
     #app.owner,
@@ -515,5 +522,5 @@ var $$ = document.querySelectorAll.bind(document);
     #page-fav .fav-main .fav-action-bottom .fav-action-fixtop {
       background-color: var(--bg1) !important;
     }
-  `)
+  `);
 })();
