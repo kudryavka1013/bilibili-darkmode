@@ -19,10 +19,15 @@
 (function () {
   "use strict";
   const url = window.location.href;
+  // 支持的页面
   const urlSet = {
-    home: "https://www.bilibili.com",
     search: "https://search.bilibili.com",
     space: "https://space.bilibili.com",
+    video: "https://www.bilibili.com/video/",
+    dynamic: "https://t.bilibili.com",
+    // anime: "https://www.bilibili.com/anime/",
+    // history: "https://www.bilibili.com/account/history",
+    home: "https://www.bilibili.com",
   };
   // 全局色彩样式覆写
   const globalColorStyle = `
@@ -48,14 +53,14 @@
     }
   `;
   // 标准背景底色
-  const stdBackground = `background-color: var(--bg1_float) !important;`
+  const stdBackground = `background-color: var(--bg1_float) !important;`;
   // 背景底色
   const backgroundSelector = [
-    'html body', // 全局
-  ]
+    "html body", // 全局
+  ];
   GM_addStyle(globalColorStyle);
   // 测试底色覆盖
-  GM_addStyle(`${backgroundSelector.join(',')} {
+  GM_addStyle(`${backgroundSelector.join(",")} {
     ${stdBackground}
   }`);
   // 视频播放页处理
