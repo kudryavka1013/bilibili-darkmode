@@ -20,15 +20,19 @@
   "use strict";
   const url = window.location.href;
   // 支持的页面
-  const urlSet = {
-    search: "https://search.bilibili.com",
-    space: "https://space.bilibili.com",
-    video: "https://www.bilibili.com/video/",
-    dynamic: "https://t.bilibili.com",
-    // anime: "https://www.bilibili.com/anime/",
-    // history: "https://www.bilibili.com/account/history",
-    home: "https://www.bilibili.com",
-  };
+  const urlSet = [
+    "https://search.bilibili.com",        // 搜索落地页
+    "https://space.bilibili.com",          // 个人空间
+    "https://www.bilibili.com/video/",     // 视频播放页
+    "https://t.bilibili.com",            // 动态
+    //"https://live.bilibili.com",         // 直播
+    //"https://www.bilibili.com/anime/",  // 番剧
+    //"https://www.bilibili.com/account/history",  // 历史记录
+    "https://www.bilibili.com",             // 首页
+  ];
+  if(urlSet.every((item) => !url.includes(item))) {
+
+  }
   // 全局色彩样式覆写
   const globalColorStyle = `
     :root {
