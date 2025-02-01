@@ -3,7 +3,7 @@
 // @name:zh-cn   b站深色模式
 // @name:en      bilibili darkmode
 // @license      MIT
-// @version      0.1.2
+// @version      0.1.3
 // @description  给b站添加深色样式
 // @description:zh-cn  给b站添加深色样式
 // @description:en make bilibili dark!
