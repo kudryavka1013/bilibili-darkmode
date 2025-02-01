@@ -48,14 +48,14 @@
     }
   `;
   // 标准背景底色
-  const stdBackground = `background-color: var(--bg1_float) !important;`
+  const stdBackground = `background-color: var(--bg1_float) !important;`;
   // 背景底色
   const backgroundSelector = [
-    'html body', // 全局
-  ]
+    "html body", // 全局
+  ];
   GM_addStyle(globalColorStyle);
   // 测试底色覆盖
-  GM_addStyle(`${backgroundSelector.join(',')} {
+  GM_addStyle(`${backgroundSelector.join(",")} {
     ${stdBackground}
   }`);
   // 视频播放页处理
@@ -521,6 +521,25 @@
     }
     #page-fav .fav-main .fav-action-bottom .fav-action-fixtop {
       background-color: var(--bg1) !important;
+    }
+    
+  `);
+  // 新版个人空间侧边栏
+  GM_addStyle(`
+    .side-nav .side-nav__item:hover {
+      background-color: var(--graph_bg_thick) !important;
+    }
+  `);
+  // 新版历史记录
+  GM_addStyle(`
+    .history-record .radio-filter__item.radio-filter__item--active {
+      color: #ffffff;
+    }
+  `);
+  // 新版收藏
+  GM_addStyle(`
+    .vui_sidebar .fav-sidebar-item .vui_sidebar-item:hover {
+      background-color: var(--graph_bg_thick) !important;
     }
   `);
 })();
